@@ -4,7 +4,7 @@ document.getElementById("btnWord").addEventListener("click", function(){
     let str = document.getElementById("inputx").value;
     //Check to ensure the user made a valid entry
     if (str == "") {
-        swal("No Word Entered!", "Please enter a word!", "error");
+        swal("Nothing Entered!", "Please enter a word or phrase!", "error");
         document.getElementById("inputx").value = "";
     }
  
@@ -18,7 +18,7 @@ document.getElementById("btnWord").addEventListener("click", function(){
     //Get the string length to use in loop
     let len = length - 1;
  
-    //Create a string to compare str1 too
+    //Create a string to compare str1 to
     let str2 = "";
  
     //Use a loop to loop str1 into str2 in reverse order
@@ -26,7 +26,7 @@ document.getElementById("btnWord").addEventListener("click", function(){
         str2 += str1[j];
     }
  
-    //Create a var to store the message to present to user.
+    //Create a variable to store the message to present to user.
     let message;
 
     //Compare the two strings to each other
@@ -37,4 +37,7 @@ document.getElementById("btnWord").addEventListener("click", function(){
         message = str + " is NOT a palindrome!"
     }
     document.getElementById("outputx").innerHTML = message;
+
+    //Clear input box
+    document.getElementById("inputx").value = "";
 });

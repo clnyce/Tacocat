@@ -31,10 +31,10 @@ document.getElementById("btnWord").addEventListener("click", function(){
 
     //Compare the two strings to each other
     if (str1 === str2) {
-        message = `"${str}" <b><u>is</u></b> a Palindrome!`;
+        message = `"<b>${str}</b>" spelled backwards is "<b>${str2}</b>", so it <b><u>is</u></b> a Palindrome!`;
     }
     else {
-        message = `"${str}" <b>is <u>NOT</u></b> a Palindrome!`;
+        message = `"<b>${str}</b>" spelled backwards is "<b>${str2}</b>", so it <b>is <u>NOT</u></b> a Palindrome!`;
     }
     document.getElementById("outputx").innerHTML = message;
 

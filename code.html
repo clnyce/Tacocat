@@ -27,6 +27,7 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <a class="navbar-brand" href="/index.html">Taco Cat</a>
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,7 +57,7 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 text-center offset-2">
+            <div class="col-lg-10 text-center offset-2">
                 <h1 class="mt-5" style="color: aliceblue;">Click the button to see my JS code</h1>
                 <p class="lead" style="color: aliceblue;">Syntax is highlighted using Prism.js</p>
                 <div class="accordion" id="accordionExample">
@@ -71,8 +72,7 @@
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                             <div class="card-body">
 <pre class="line-numbers">
-<code class="language-javascript">
-//Palindrome Test Function
+<code class="language-javascript">//Palindrome Test Function
 document.getElementById("btnWord").addEventListener("click", function(){
 
     let str = document.getElementById("inputx").value;
@@ -81,34 +81,34 @@ document.getElementById("btnWord").addEventListener("click", function(){
         swal("Nothing Entered!", "Please enter a word or phrase!", "error");
         document.getElementById("inputx").value = "";
     }
- 
+    
     //Convert string to all lowercase letters
     let str1 = str.toLowerCase();
- 
+    
     //Remove all spaces from the string
     str1 = str1.replace(/ /g, "");
     let length = str1.length;
 
     //Get the string length to use in loop
     let len = length - 1;
- 
+    
     //Create a string to compare str1 to
     let str2 = "";
- 
+    
     //Use a loop to loop str1 into str2 in reverse order
     for (j = len; j >= 0; j--) {
         str2 += str1[j];
     }
- 
+    
     //Create a variable to store the message to present to user.
     let message;
 
     //Compare the two strings to each other
     if (str1 === str2) {
-        message = str + " is a palindrome!"
+        message = `"<b>${str}</b>" spelled backwards is "<b>${str2}</b>", so it <b><u>is</u></b> a Palindrome!`;
     }
     else {
-        message = str + " is NOT a palindrome!"
+        message = `"<b>${str}</b>" spelled backwards is "<b>${str2}</b>", so it <b>is <u>NOT</u></b> a Palindrome!`;
     }
     document.getElementById("outputx").innerHTML = message;
 

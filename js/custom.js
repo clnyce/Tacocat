@@ -31,10 +31,10 @@ document.getElementById("btnWord").addEventListener("click", function(){
 
     //Compare the two strings to each other
     if (str1 === str2) {
-        message = str + " is a palindrome!"
+        message = `"${str}" <b><u>is</u></b> a Palindrome!`;
     }
     else {
-        message = str + " is NOT a palindrome!"
+        message = `"${str}" <b>is <u>NOT</u></b> a Palindrome!`;
     }
     document.getElementById("outputx").innerHTML = message;
 
